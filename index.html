@@ -13,7 +13,7 @@
         rel="stylesheet">
 </head>
 
-<body class="bg-[#5e80de] font-[Poppins]">
+<body id="body" class="bg-[#f4f7ff] font-[Poppins]">
 
     <nav class="flex justify-between my-6 mx-10  p-6 bg-white rounded-2xl">
         <div class="flex items-center gap-4 ">
@@ -27,7 +27,7 @@
                 <img src="/assets/checkbox.png" alt="checkbox">
                 <p class="text-3xl font-extrabold">23</p>
             </div>
-            <button class="bg-[#f4f7ff] p-4 rounded-full">
+            <button id="color_change" class="bg-[#f4f7ff] p-4 rounded-full">
                 <img src="assets/theme-btn.png" alt="theme-btn">
             </button>
         </div>
@@ -218,12 +218,12 @@
                     <img src="assets/activity.png" alt="history">
                     <h1>Activity Log</h1>
                 </div>
-                <button class="px-5 py-2 bg-[#3752FD] rounded-lg text-white mb-2">
+                <button id="clear_history" class="px-5 py-2 bg-[#3752FD] rounded-lg text-white mb-2">
                     Clear History
                 </button>
 
             </div>
-            <div class="my-4">
+            <div id="history" class="my-4">
                 <p class="p-3 my-4 bg-[#f4f7ff] rounded-lg text-sm text-gray-500">
                     You have Complete The Task
                     <span>Add Dark Mode </span>
