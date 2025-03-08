@@ -25,7 +25,7 @@
         <div class="flex items-center gap-6">
             <div class="flex items-center gap-6 bg-[#F4F7FF] p-4 rounded-4xl">
                 <img src="/assets/checkbox.png" alt="checkbox">
-                <p class="text-3xl font-extrabold">23</p>
+                <p id="task_done" class="text-3xl font-extrabold">23</p>
             </div>
             <button id="color_change" class="bg-[#f4f7ff] p-4 rounded-full">
                 <img src="assets/theme-btn.png" alt="theme-btn">
@@ -48,7 +48,7 @@
 
                     <div class=" text-[#00303C] w-full">
                         <p class=" text-sm">Task Assigned</p>
-                        <h1 class="text-xl font-extrabold">05</h1>
+                        <h1 id="task_assign" class="text-xl font-extrabold">06</h1>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                 <div id="discover_new"  class="col-span-2 flex items-center   rounded-xl pl-4
                  gap-3 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]  ">
                     <div><img src="assets/board.png" alt="board"></div>
-                    <h1 class="text-white text-xl">Discover Something <br>
+                    <h1 class="text-white text-xl">Discover Something 
                         New Today!</h1>
                 </div>
                 <div class="bg-[#F4F7FF] p-4 rounded-xl flex items-center gap-2 ">
@@ -65,8 +65,8 @@
                     </div>
 
                     <div class=" text-[#00303C] w-full">
-                        <p class=" text-lg">Wed ,</p>
-                        <h1 class="text-lg font-extrabold">
+                        <p  class=" text-lg"><span id="week_day">Wed</span> ,</p>
+                        <h1 id="date" class="text-lg font-extrabold">
                             Jul 28 2025</h1>
                     </div>
                 </div>
@@ -74,8 +74,8 @@
             <div class="pt-8
             grid grid-cols-3 gap-6 auto-rows-fr
             ">
-                <!-- card  -->
-                <div class="bg-[#f4f7ff] p-4 rounded-2xl">
+                <!-- card 1 -->
+                <div class="parent bg-[#f4f7ff] p-4 rounded-2xl">
                     <span class="bg-white text-[#00303C] px-2 py-1 rounded-lg text-sm">ShopEase</span>
                     <h1 class="text-[#00303C] font-medium py-4">Fix Mobile Button Issue</h1>
                     <p class="overflow-hidden text-ellipsis text-sm text-gray-400 bg-white p-4 rounded-lg ">
@@ -90,14 +90,14 @@
                             <h5 class="text-sm">21 March 2025</h5>
                         </div>
                         <div>
-                            <button class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
+                            <button onclick="completeTask(this)" class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- card  -->
-                <div class="bg-[#f4f7ff] p-4 rounded-2xl">
+                <!-- card 2 -->
+                <div class="parent bg-[#f4f7ff] p-4 rounded-2xl">
                     <span class="bg-white text-[#00303C] px-2 py-1 rounded-lg text-sm">CloudSync</span>
                     <h1 class="text-[#00303C] font-medium py-4">Add Dark Mode</h1>
                     <p class="overflow-hidden text-ellipsis text-sm text-gray-400 bg-white p-4 rounded-lg ">
@@ -112,14 +112,14 @@
                             <h5 class="text-sm">21 March 2025</h5>
                         </div>
                         <div>
-                            <button class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
+                            <button  onclick="completeTask(this)" class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- card  -->
-                <div class="bg-[#f4f7ff] p-4 rounded-2xl">
+                <!-- card 3 -->
+                <div class="parent bg-[#f4f7ff] p-4 rounded-2xl">
                     <span class="bg-white text-[#00303C] px-2 py-1 rounded-lg text-sm">SwiftPay</span>
                     <h1 class="text-[#00303C] font-medium py-4">Optimize Home page</h1>
                     <p class="overflow-hidden text-ellipsis text-sm text-gray-400 bg-white p-4 rounded-lg ">
@@ -134,14 +134,14 @@
                             <h5 class="text-sm">21 March 2025</h5>
                         </div>
                         <div>
-                            <button class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
+                            <button onclick="completeTask(this)" class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- card  -->
-                <div class="bg-[#f4f7ff] p-4 rounded-2xl">
+                <!-- card 4 -->
+                <div class="parent bg-[#f4f7ff] p-4 rounded-2xl">
                     <span class="bg-white text-[#00303C] px-2 py-1 rounded-lg text-sm">Meta</span>
                     <h1 class="text-[#00303C] font-medium py-4">Add new emoji 🤲</h1>
                     <p class="overflow-hidden text-ellipsis text-sm text-gray-400 bg-white p-4 rounded-lg ">
@@ -156,14 +156,14 @@
                             <h5 class="text-sm">21 March 2025</h5>
                         </div>
                         <div>
-                            <button class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
+                            <button onclick="completeTask(this)" class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- card  -->
-                <div class="bg-[#f4f7ff] p-4 rounded-2xl">
+                <!-- card 5  -->
+                <div class="parent bg-[#f4f7ff] p-4 rounded-2xl">
                     <span class="bg-white text-[#00303C] px-2 py-1 rounded-lg text-sm">Google LLC</span>
                     <h1 class="text-[#00303C] font-medium py-4">Integrate OpenAI API</h1>
                     <p class="overflow-hidden text-ellipsis text-sm text-gray-400 bg-white p-4 rounded-lg ">
@@ -178,16 +178,16 @@
                             <h5 class="text-sm">21 March 2025</h5>
                         </div>
                         <div>
-                            <button class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
+                            <button onclick="completeTask(this)" class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
                                 Completed
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- card  -->
-                <div class="bg-[#f4f7ff] p-4 rounded-2xl">
+                <!-- card 6 -->
+                <div class="parent bg-[#f4f7ff] p-4 rounded-2xl">
                     <span class="bg-white text-[#00303C] px-2 py-1 rounded-lg text-sm">Glassdoar</span>
-                    <h1 class="text-[#00303C] font-medium py-4">Improve Job searching</h1>
+                    <h1 id="problem" class="text-[#00303C] font-medium py-4">Improve Job searching</h1>
                     <p class="overflow-hidden text-ellipsis text-sm text-gray-400 bg-white p-4 rounded-lg ">
                         Debug using Chrome DevTools, check for
                         <span class="truncate">overlapping elements, and ensure onClick works properly
@@ -200,7 +200,7 @@
                             <h5 class="text-sm">21 March 2025</h5>
                         </div>
                         <div>
-                            <button class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg">
+                            <button onclick="completeTask(this)" class="bg-[#3752FD] px-4 py-2.5 text-white text-sm text-center rounded-lg" >
                                 Completed
                             </button>
                         </div>
@@ -224,16 +224,7 @@
 
             </div>
             <div id="history" class="my-4">
-                <p class="p-3 my-4 bg-[#f4f7ff] rounded-lg text-sm text-gray-500">
-                    You have Complete The Task
-                    <span>Add Dark Mode </span>
-                    at <span>12:48:15 PM</span>
-                </p>
-                <p class="p-3 my-4 bg-[#f4f7ff] rounded-lg text-sm text-gray-500">
-                    You have Complete The Task
-                    <span>Add Dark Mode </span>
-                    at <span>12:48:15 PM</span>
-                </p>
+                
             </div>
         </div>
     </div>
